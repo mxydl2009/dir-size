@@ -5,14 +5,14 @@
 ## Install
 
 ```
-$ npm install dir-size
+$ npm install @mxydl2009/dir-size
 ```
 
 ## Usage
 
 ```js
 // foo.js
-const { size } = require('dir-size');
+const { size } = require('@mxydl2009/dir-size');
 
 // 当前目录{__dirname}所有文件的大小
 console.log(await size('./'));
