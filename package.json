@@ -6,6 +6,7 @@
 		"name": "mxydl2009",
 		"email": "mxydl2009@163.com"
 	},
+  "repository": "https://gitee.com/mxydl2009/dir-size",
   "main": "index.js",
   "type": "module",
   "exports": "./index.js",
