@@ -8,7 +8,7 @@
 	},
   "repository": "https://gitee.com/mxydl2009/dir-size",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "exports": "./index.js",
   "scripts": {
     "test": "mocha test/*.test.js"
