@@ -1,8 +1,7 @@
 const sizeAsync = require('./size.async');
-const { sizeSync, sizeSyncTest } = require('./size.sync');
+const { sizeSync } = require('./size.sync');
 
 module.exports = {
   size: sizeAsync,
-  sizeSync,
-  sizeSyncTest
+  sizeSync
 }

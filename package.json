@@ -1,6 +1,6 @@
 {
   "name": "@mxydl2009/dir-size",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "calculate the size of all files of the given dir",
   "author": {
 		"name": "mxydl2009",
