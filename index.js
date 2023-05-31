@@ -6,5 +6,3 @@ module.exports = {
   sizeSync,
   sizeSyncTest
 }
-
-console.log(sizeSync('./12'))
