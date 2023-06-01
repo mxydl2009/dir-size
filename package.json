@@ -9,7 +9,7 @@
   "bin": {
     "dsize": "bin/index.js"
   },
-  "repository": "https://gitee.com/mxydl2009/dir-size",
+  "repository": "https://github.com/mxydl2009/dir-size",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "sideEffects": false,
