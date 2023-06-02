@@ -60,7 +60,7 @@ async function calculateFilesSize(files) {
 
 async function size(dir, exclude) {
   // 解析dir为绝对路径
-  const abPath = resolve(__dirname, dir);
+  const abPath = resolve(process.cwd(), dir);
   // 检查dir是否存在
   const exists = await dirIsExists(abPath);
   if (exists) {
