@@ -1,6 +1,7 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { bannerInfo } from './banner.cjs';
+import { getBabelConfig } from './babel.config.cjs';
 
 export default {
   input: 'src/index.js',
@@ -9,5 +10,5 @@ export default {
     format: 'es',
     banner: bannerInfo
   },
-  plugins: [commonjs(), nodeResolve()]
+  plugins: [commonjs(), nodeResolve(), getBabelConfig()]
 }
