@@ -1,6 +1,6 @@
 {
   "name": "@mxydl2009/dir-size",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "calculate the size of all files of the given dir",
   "author": {
     "name": "mxydl2009",
@@ -11,11 +11,10 @@
   },
   "repository": "https://github.com/mxydl2009/dir-size",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c config/rollup.config.mjs && rollup -c config/rollup.config.esm.mjs",
-    "test": "mocha test/*.test.js"
+    "build": "rollup -c config/rollup.config.mjs",
+    "test": "cross-env NODE_ENV=test nyc mocha test/*.mjs"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -24,7 +23,6 @@
     "dist"
   ],
   "keywords": [
-    "fs",
     "directory",
     "size",
     "files"
@@ -41,12 +39,16 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "mocha": "^10.2.0",
     "mock-fs": "^5.2.0",
+    "nyc": "^15.1.0",
     "rollup": "^3.23.0"
   },
   "dependencies": {
+    "@babel/register": "^7.21.0",
     "axios": "^1.4.0",
+    "babel-plugin-istanbul": "^6.1.1",
     "colors": "^1.4.0",
     "commander": "^10.0.1",
+    "cross-env": "^7.0.3",
     "human-format": "^1.2.0",
     "import-local": "^3.1.0",
     "npmlog": "^7.0.1",

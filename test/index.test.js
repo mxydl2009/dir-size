@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { size, sizeSync } = require('../dist/index');
+const { size, sizeSync } = require('../dist/index.js');
 const mock = require('mock-fs');
 
 describe('size of /mock', function() {
@@ -18,6 +18,11 @@ describe('size of /mock', function() {
       },
       '/mock/pic.png': Buffer.from([1, 2, 3, 4, 5, 6])
     });
+  })
+
+  after(() => {
+    // 必须还原为原系统的file system，否则会进行各种文件系统报错，如测试框架可能会由于文件系统是mock的而报错
+    mock.restore();
   })
 
   it('async size should be 32', async function() {
