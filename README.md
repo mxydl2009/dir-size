@@ -18,22 +18,29 @@ $ npm install @mxydl2009/dir-size -g
 // foo.js
 const { size } = require('@mxydl2009/dir-size');
 
-// 当前目录{__dirname}所有文件的大小
-console.log(await size('./'));
+// size of current working directory, exclude node_modules directory
+console.log(await size('./', 'node_modules'));
 ```
 
 ### usage for cli
 ```bash
 # calculate size of current working directory
-$ dsize --dir .
+$ dsize --dir . --exclude node_modules
 ```
 
 ## API
 
-### size(path)
+### size(path, [exclude])
 
 Returns a `Promise<number>` of all files size of path.
 
-### sizeSync(path)
+### sizeSync(path, [exclude])
 
 Returns a `number` of all files size of path.
+
+### Options
+#### path<string>
+require absolute path or relative path, when relative path is relative to the current working directory
+
+#### exclude<string>
+option argument, require the whole directory name, exclude the directory that you don't want to include

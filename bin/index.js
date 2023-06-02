@@ -15,7 +15,10 @@ const pkg = require('../package.json');
 
 program
   .version(pkg.version)
-  .option('-d --dir <directory>', 'input the directory ( absolute path or relative path, when relative path is relative to cwd) of which you want to calculate the size')
+  .option('-d --dir <directory>', 
+    'input the directory ( absolute path or relative path, when relative path is relative to cwd) of which you want to calculate the size'
+    )
+  .option('-e --exclude <directoryName>', 'excluded directory name that will not be calculated')
   .action(async (options) => {
     if (!options.dir) {
       npmLog.error('you must input the directory, please refer the help');
@@ -26,7 +29,7 @@ program
       const cwd = process.cwd();
       const dir = options.dir.startsWith('/')? options.dir: path.resolve(cwd, options.dir);
       const { size } = require('../dist/index');
-      const totalSize = await size(dir);
+      const totalSize = await size(dir, options.exclude);
       const transformedSize = humanFormat(totalSize, {
         scale: "binary",
         unit: "B",
