@@ -39,8 +39,8 @@ Returns a `Promise<number>` of all files size of path.
 Returns a `number` of all files size of path.
 
 ### Options
-#### path<string>
+#### path`<string>`
 require absolute path or relative path, when relative path is relative to the current working directory
 
-#### exclude<string>
+#### exclude`<string>`
 option argument, require the whole directory name, exclude the directory that you don't want to include
