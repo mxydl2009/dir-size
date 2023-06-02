@@ -1,6 +1,6 @@
 {
   "name": "@mxydl2009/dir-size",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "calculate the size of all files of the given dir",
   "author": {
     "name": "mxydl2009",
@@ -14,7 +14,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c config/rollup.config.mjs",
-    "test": "cross-env NODE_ENV=test nyc mocha test/*.mjs"
+    "test": "cross-env NODE_ENV=test nyc mocha test/*.js"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -32,13 +32,14 @@
     "@babel/core": "^7.22.1",
     "@babel/plugin-transform-runtime": "^7.22.4",
     "@babel/preset-env": "^7.22.4",
+    "@babel/register": "^7.21.0",
     "@babel/runtime": "^7.22.3",
     "@babel/runtime-corejs3": "^7.22.3",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "babel-plugin-istanbul": "^6.1.1",
-    "@babel/register": "^7.21.0",
+    "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "mock-fs": "^5.2.0",
     "nyc": "^15.1.0",

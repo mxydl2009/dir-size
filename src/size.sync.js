@@ -16,8 +16,7 @@ function dirIsDirSync(dir) {
     const isDir = dirInfo.isDirectory();
     return isDir;
   } catch(err) {
-    console.log(err);
-    throw err;
+    return false
   }
 }
 
